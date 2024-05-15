@@ -22,6 +22,7 @@ const schema = Yup.object().shape({
     .email("Invalid email!")
     .required("Please enter your email!"),
   password: Yup.string().required("Please enter your password!").min(6),
+  role: Yup.string().required("Please select your role!"),
 });
 
 const Signup: FC<Props> = ({ setRoute }) => {
@@ -44,11 +45,11 @@ const Signup: FC<Props> = ({ setRoute }) => {
   
 
   const formik = useFormik({
-    initialValues: { name: "", email: "", password: "" },
+    initialValues: { name: "", email: "", password: "", role:"user" },
     validationSchema: schema,
-    onSubmit: async ({name, email, password }) => {
+    onSubmit: async ({name, email, password, role }) => {
       const data = {
-        name,email,password
+        name,email,password,role
       };
       await register(data);
     },
@@ -60,6 +61,7 @@ const Signup: FC<Props> = ({ setRoute }) => {
     <div className="w-full">
       <h1 className={`${styles.title}`}>Join to ELearning</h1>
       <form onSubmit={handleSubmit}>
+
         <div className="mb-3">
           <label className={`${styles.label}`} htmlFor="email">
             Enter your Name
@@ -79,6 +81,7 @@ const Signup: FC<Props> = ({ setRoute }) => {
             <span className="text-red-500 pt-2 block">{errors.name}</span>
           )}
         </div>
+
         <label className={`${styles.label}`} htmlFor="email">
           Enter your Email
         </label>
@@ -96,6 +99,7 @@ const Signup: FC<Props> = ({ setRoute }) => {
         {errors.email && touched.email && (
           <span className="text-red-500 pt-2 block">{errors.email}</span>
         )}
+
         <div className="w-full mt-5 relative mb-1">
           <label className={`${styles.label}`} htmlFor="email">
             Enter your password
@@ -128,6 +132,28 @@ const Signup: FC<Props> = ({ setRoute }) => {
         {errors.password && touched.password && (
           <span className="text-red-500 pt-2 block">{errors.password}</span>
         )}
+
+        <div className="mb-3">
+          <label className={`${styles.label}`} htmlFor="role">
+            Select your role
+          </label>
+          <select
+            name="role"
+            value={values.role}
+            onChange={handleChange}
+            id="role"
+            className={`${errors.role && touched.role && "border-red-500"} ${
+              styles.input
+            }`}
+          >
+            <option value="user">User</option>
+            <option value="admin">Instructor</option>
+          </select>
+          {errors.role && touched.role && (
+            <span className="text-red-500 pt-2 block">{errors.role}</span>
+          )}
+        </div>
+
         <div className="w-full mt-5">
           <input type="submit" value="Sign Up" className={`${styles.button}`} />
         </div>
