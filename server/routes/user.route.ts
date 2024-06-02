@@ -37,21 +37,21 @@ userRouter.put("/update-user-avatar", isAutheticated, updateProfilePicture);
 userRouter.get(
   "/get-users",
   isAutheticated,
-  authorizeRoles("admin"),
+  authorizeRoles("admin", "super-admin"),
   getAllUsers
 );
 
 userRouter.put(
   "/update-user",
   isAutheticated,
-  authorizeRoles("admin"),
+  authorizeRoles("admin", "super-admin"),
   updateUserRole
 );
 
 userRouter.delete(
   "/delete-user/:id",
   isAutheticated,
-  authorizeRoles("admin"),
+  authorizeRoles("admin", "super-admin"),
   deleteUser
 );
 

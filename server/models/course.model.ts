@@ -33,6 +33,7 @@ interface ICourseData extends Document {
 }
 
 export interface ICourse extends Document {
+  createdBy: IUser;
   name: string;
   description: string;
   categories: string;
@@ -85,6 +86,11 @@ const courseDataSchema = new Schema<ICourseData>({
 });
 
 const courseSchema = new Schema<ICourse>({
+  createdBy: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: "User",
+    required: true,
+  },
   name: {
     type: String,
     required: true,

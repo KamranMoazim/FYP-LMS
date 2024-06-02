@@ -21,7 +21,7 @@ const AllCourses: FC<Props> = ({ isTeam }) => {
   const { theme, setTheme } = useTheme();
   const [active, setActive] = useState(false);
   const [email, setEmail] = useState("");
-  const [role, setRole] = useState("admin");
+  const [role, setRole] = useState("super-admin");
   const [open, setOpen] = useState(false);
   const [userId, setUserId] = useState("");
   const [updateUserRole, { error: updateError, isSuccess }] =
@@ -108,7 +108,7 @@ const AllCourses: FC<Props> = ({ isTeam }) => {
 
   if (isTeam) {
     const newData =
-      data && data.users.filter((item: any) => item.role === "admin");
+      data && data.users.filter((item: any) => item.role === "admin" || item.role === "super-admin" );
 
     newData &&
       newData.forEach((item: any) => {

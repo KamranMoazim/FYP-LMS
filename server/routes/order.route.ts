@@ -13,7 +13,7 @@ orderRouter.post("/create-order", isAutheticated, createOrder);
 orderRouter.get(
   "/get-orders",
   isAutheticated,
-  authorizeRoles("admin"),
+  authorizeRoles("admin", "super-admin"),
   getAllOrders
 );
 

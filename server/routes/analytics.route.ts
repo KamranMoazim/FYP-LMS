@@ -4,11 +4,11 @@ import { getCoursesAnalytics, getOrderAnalytics, getUsersAnalytics } from "../co
 const analyticsRouter = express.Router();
 
 
-analyticsRouter.get("/get-users-analytics", isAutheticated,authorizeRoles("admin"), getUsersAnalytics);
+analyticsRouter.get("/get-users-analytics", isAutheticated, authorizeRoles("admin", "super-admin"), getUsersAnalytics);
 
-analyticsRouter.get("/get-orders-analytics", isAutheticated,authorizeRoles("admin"), getOrderAnalytics);
+analyticsRouter.get("/get-orders-analytics", isAutheticated,authorizeRoles("admin", "super-admin"), getOrderAnalytics);
 
-analyticsRouter.get("/get-courses-analytics", isAutheticated,authorizeRoles("admin"), getCoursesAnalytics);
+analyticsRouter.get("/get-courses-analytics", isAutheticated,authorizeRoles("admin", "super-admin"), getCoursesAnalytics);
 
 
 export default analyticsRouter;

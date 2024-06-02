@@ -6,9 +6,9 @@ const notificationRoute = express.Router();
 notificationRoute.get(
   "/get-all-notifications",
   isAutheticated,
-  authorizeRoles("admin"),
+  authorizeRoles("admin", "super-admin"),
   getNotifications
 );
-notificationRoute.put("/update-notification/:id", isAutheticated, authorizeRoles("admin"), updateNotification);
+notificationRoute.put("/update-notification/:id", isAutheticated, authorizeRoles("admin", "super-admin"), updateNotification);
 
 export default notificationRoute;

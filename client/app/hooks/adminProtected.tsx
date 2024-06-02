@@ -10,7 +10,7 @@ export default function AdminProtected({ children }: ProtectedProps) {
   const { user } = useSelector((state: any) => state.auth);
 
   if (user) {
-    const isAdmin = user?.role === "admin";
+    const isAdmin = user?.role === "admin" || user?.role === "super-admin";
     return isAdmin ? children : redirect("/");
   }
 }

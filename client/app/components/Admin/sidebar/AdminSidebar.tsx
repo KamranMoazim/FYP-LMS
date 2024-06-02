@@ -175,7 +175,8 @@ const Sidebar = () => {
               setSelected={setSelected}
             />
 
-            <Typography
+            {user?.role === "admin" && (<>
+              <Typography
               variant="h5"
               sx={{ m: "15px 0 5px 25px" }}
               className="!text-[18px] text-black dark:text-[#ffffffc1] capitalize !font-[400]"
@@ -219,7 +220,11 @@ const Sidebar = () => {
               selected={selected}
               setSelected={setSelected}
             />
+            
+            </>)}
 
+          {user?.role === "super-admin" && (
+            <>
             <Typography
               variant="h5"
               className="!text-[18px] text-black dark:text-[#ffffffc1] capitalize !font-[400]"
@@ -293,6 +298,9 @@ const Sidebar = () => {
               selected={selected}
               setSelected={setSelected}
             />
+
+            </>
+          )}
 
             <Typography
               variant="h6"
