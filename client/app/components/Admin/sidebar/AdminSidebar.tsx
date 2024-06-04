@@ -232,13 +232,13 @@ const Sidebar = () => {
             >
               {!isCollapsed && "Customization"}
             </Typography>
-            <Item
+            {/* <Item
               title="Hero"
               to="/admin/hero"
               icon={<WebIcon />}
               selected={selected}
               setSelected={setSelected}
-            />
+            /> */}
             <Item
               title="FAQ"
               to="/admin/faq"

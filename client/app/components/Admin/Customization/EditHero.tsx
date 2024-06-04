@@ -1,3 +1,5 @@
+"use client";
+
 import { styles } from "@/app/styles/style";
 import {
   useEditLayoutMutation,
@@ -20,6 +22,7 @@ const EditHero: FC<Props> = (props: Props) => {
 
   useEffect(() => {
     if (data) {
+      console.log(data)
       setTitle(data?.layout?.banner.title);
       setSubTitle(data?.layout?.banner.subTitle);
       setImage(data?.layout?.banner?.image?.url);

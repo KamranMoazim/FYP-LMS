@@ -134,3 +134,8 @@ REFRESH_TOKEN = 'Y8Kk5Bwg5GiKulOjb3b0!dXhvp07R6Le85l^&4S^sh677NS@X3'
 ACCESS_TOKEN_EXPIRE = 5
 
 REFRESH_TOKEN_EXPIRE = 3
+
+
+
+
+{"_id":{"$oid":"662f791a1dfa6b0664926c92"},"type":"Banner","banner":{"title":"","subTitle":"","image":{"url":""}},"faq":[],"categories":[],"__v":{"$numberInt":"0"}}
