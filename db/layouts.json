@@ -1,0 +1,5 @@
+[
+    {"_id":{"$oid":"662e2604b97762cbed218092"},"type":"FAQ","faq":[{"question":"Is this Lifetime Free Course?","answer":"Yes!","_id":{"$oid":"666006b04b8203f33c9a7407"}},{"question":"Test Question","answer":"Test Answer","_id":{"$oid":"666006b04b8203f33c9a7408"}}],"categories":[],"__v":{"$numberInt":"0"}},
+    {"_id":{"$oid":"662e2747db82951562d8ddad"},"type":"Categories","categories":[{"title":"Frontend","_id":{"$oid":"666008c04b8203f33c9a741e"}},{"title":"Backend","_id":{"$oid":"666008c04b8203f33c9a741f"}},{"title":"FullStack","_id":{"$oid":"666008c04b8203f33c9a7420"}},{"title":"Dotnet","_id":{"$oid":"666008c04b8203f33c9a7421"}},{"title":"Test Category","_id":{"$oid":"666008c04b8203f33c9a7422"}},{"title":"Node Js","_id":{"$oid":"666008c04b8203f33c9a7423"}}]},
+    {"_id":{"$oid":"665f55649c4a16dd9529ea8d"},"type":"Banner","banner":{"image":{"url":"https://res.cloudinary.com/dgtfji97h/image/upload/v1717523950/layout/gurvx7wpfninxe6ssi57.jpg"},"subTitle":"We have more than 250+ Courses with more than 200K+ Students.","title":"Improve your online experience by Educsculpt"},"faq":[],"categories":[],"__v":{"$numberInt":"0"}}
+]

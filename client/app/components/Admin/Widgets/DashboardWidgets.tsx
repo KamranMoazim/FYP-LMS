@@ -104,7 +104,8 @@ const DashboardWidgets: FC<Props> = ({ open }) => {
               <div className="">
                 <BiBorderLeft className="dark:text-[#45CBA0] text-[#000] text-[30px]" />
                 <h5 className="pt-2 font-Poppins dark:text-[#fff] text-black text-[20px]">
-                  {ordersComparePercentage?.currentMonth}
+                  {/* {ordersComparePercentage?.currentMonth} */}
+                  1
                 </h5>
                 <h5 className="py-2 font-Poppins dark:text-[#45CBA0] text-black text-[20px] font-[400]">
                   Sales Obtained
@@ -112,16 +113,18 @@ const DashboardWidgets: FC<Props> = ({ open }) => {
               </div>
               <div>
                 <CircularProgressWithLabel value={
-                  ordersComparePercentage?.percentChange > 0 
-                  ? 100 
-                  : 0
+                  // ordersComparePercentage?.percentChange > 0 
+                  // ? 100 
+                  // : 0
+                  80
                 } open={open} />
                 <h5 className="text-center pt-4">
-                 {
+                 {/* {
                   ordersComparePercentage?.percentChange > 0 
                   ? "+" + ordersComparePercentage?.percentChange.toFixed(2)
                   : "-" + ordersComparePercentage?.percentChange.toFixed(2)
-                 } %
+                 }  */}
+                 80 %
                 </h5>
               </div>
             </div>

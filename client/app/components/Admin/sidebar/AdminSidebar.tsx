@@ -311,7 +311,7 @@ const Sidebar = () => {
             </Typography>
             <div onClick={logoutHandler}>
               <Item
-                title="Logout"
+                title="Exit From Admin"
                 to="/"
                 icon={<ExitToAppIcon />}
                 selected={selected}

@@ -146,7 +146,7 @@ const Signup: FC<Props> = ({ setRoute }) => {
               styles.input
             }`}
           >
-            <option value="user">User</option>
+            <option value="user">Student</option>
             <option value="admin">Instructor</option>
           </select>
           {errors.role && touched.role && (

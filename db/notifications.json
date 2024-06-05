@@ -1,0 +1,4 @@
+[
+    {"_id":{"$oid":"662fe12eb06f166b53a0840d"},"title":"New Order","message":"You have a new order from Angular Course","status":"read","createdAt":{"$date":{"$numberLong":"1714413870668"}},"updatedAt":{"$date":{"$numberLong":"1714476489054"}},"__v":{"$numberInt":"0"}},
+    {"_id":{"$oid":"662fe837caf50dddba5cee54"},"title":"New Review Received","message":"student has given a review in Angular Course","status":"read","createdAt":{"$date":{"$numberLong":"1714415671389"}},"updatedAt":{"$date":{"$numberLong":"1714476491569"}},"__v":{"$numberInt":"0"}}
+]
